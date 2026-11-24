@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstaCaption AI — Mood to Caption Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-icon">📸</span> InstaCaption <span class="ai">AI</span></a>
+      <span class="top-note">Your mood. Your words. Your vibe.</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">✨ YOUR PERSONAL CAPTION STUDIO</div>
+      <h1>Perfect Instagram captions,<br><span>in seconds.</span></h1>
+      <p>Describe your post, pick a mood, and get captions that sound like you.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="section-heading">
+        <div><span class="step">01</span><h2>Generate your caption</h2></div>
+        <span class="tiny-label">LET'S CREATE SOMETHING</span>
+      </div>
+
+      <label for="description">Describe your Instagram post</label>
+      <div class="textarea-wrap">
+        <textarea id="description" maxlength="1000" placeholder="E.g. A beautiful evening with my favourite people, watching the sunset..."></textarea>
+        <div class="textarea-footer">
+          <button id="clearBtn" class="text-button" type="button">↺ Clear</button>
+          <span id="charCount">0/1000</span>
+        </div>
+      </div>
+
+      <div class="mood-heading"><label>Choose your caption mood</label><span>Pick one vibe</span></div>
+      <div class="mood-grid" id="moodGrid">
+        <button class="mood active" data-mood="Funny"><span>😂</span>Funny</button>
+        <button class="mood" data-mood="Romantic"><span>💞</span>Romantic</button>
+        <button class="mood" data-mood="Professional"><span>💼</span>Professional</button>
+        <button class="mood" data-mood="Attitude"><span>😎</span>Attitude</button>
+        <button class="mood" data-mood="Cute"><span>🧸</span>Cute</button>
+        <button class="mood" data-mood="Inspirational"><span>🌟</span>Inspirational</button>
+      </div>
+
+      <button id="generateBtn" class="generate-btn" type="button">✨ Generate captions <span>→</span></button>
+      <p class="helper">Three fresh ideas, made for your mood. No API key needed.</p>
+      <div id="message" class="message" role="status"></div>
+      <section id="results" class="results hidden">
+        <div class="results-title"><div><span class="step">02</span><h2>Your captions</h2></div><span class="result-count">3 IDEAS</span></div>
+        <div id="captionList" class="caption-list"></div>
+      </section>
+    </section>
+
+    <section class="favourites">
+      <div class="section-heading">
+        <div><span class="step">♥</span><h2>My favourite captions</h2></div>
+        <span class="tiny-label">YOUR SAVED COLLECTION</span>
+      </div>
+      <div id="favouritesList" class="favourites-list">
+        <div class="empty-state"><span>♡</span><p>No favourite captions saved yet.</p><small>Tap “Save favourite” on any caption to keep it here.</small></div>
+      </div>
+    </section>
+    <footer>Made with <span>♥</span> for your next great post · InstaCaption AI</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
